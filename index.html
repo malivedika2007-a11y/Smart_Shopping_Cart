@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shopping Cart - Team Mindstack</title>
+    <style>
+        :root {
+            --primary-color: #007bff; /* Tech Blue */
+            --secondary-color: #ffc107; /* Matches DKTE/Google Yellow */
+            --dark-bg: #343a40;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #0056b3);
+            color: white;
+            padding: 120px 20px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        /* Problem & Solution Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: var(--light-bg);
+            padding: 20px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+        }
+
+        /* Tech Stack */
+        .tech-stack ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .tech-stack li {
+            background: #e9ecef;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Architecture Images Placeholder */
+        .diagram-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            color: #666;
+            border: 2px dashed #999;
+        }
+
+        /* Future Roadmap */
+        .roadmap-list {
+            list-style-type: none;
+        }
+        .roadmap-list li::before {
+            content: "🚀";
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Mindstack</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#tech">Technology</a>
+                <a href="#future">Future</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Smart Shopping Cart</h1>
+        <p>Automating Shopping & Billing for the Future</p>
+        <p><strong>Team:</strong> Mindstack | <strong>Problem ID:</strong> 0QAs8qGzo0ajXevSbkc9</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="section-title">Overview</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>🚫 The Problem</h3>
+                <p><strong>Time-Consuming Billing System 2.0:</strong> In traditional shopping, each item must be scanned manually, leading to increased billing time. Long queues at checkout counters waste customers' valuable time[cite: 16, 17].</p>
+            </div>
+            <div class="card">
+                <h3>✅ The Solution</h3>
+                <p>An automated shopping and billing system using <strong>RFID/Barcode technology</strong>. It detects items automatically, updates the bill in real-time, and reduces human intervention, providing a smart shopping experience[cite: 18, 19].</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" style="background-color: #f1f5f9;">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Automatic Item Detection</h4>
+                    <p>Uses RFID/barcode technology to identify products instantly as they are added or removed[cite: 27].</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Real-Time Billing</h4>
+                    <p>Instantly updates the total bill on the cart display without waiting for checkout[cite: 27].</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Self-Billing System</h4>
+                    <p>Eliminates the need for manual scanning and separate billing counters[cite: 27].</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Live Cost Tracking</h4>
+                    <p>Customers can view their total spending while shopping to manage their budget[cite: 27].</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Fast Checkout</h4>
+                    <p>Reduces billing time and minimizes long queues at counters[cite: 27].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Architecture & Workflow</h2>
+        <div class="grid-2">
+            <div>
+                <h3>Process Flow</h3>
+                <div class="diagram-placeholder">
+                    <p>Insert Process Flow Diagram Here</p>
+                </div>
+                <p><em>Cart Setting -> Information -> Security -> Received Item [cite: 31]</em></p>
+            </div>
+            <div>
+                <h3>System Architecture</h3>
+                <div class="diagram-placeholder">
+                    <p>Insert Architecture Diagram Here</p>
+                </div>
+                <p><em>Product -> Microcontroller (RFID/LCD) -> WiFi/App -> Bill [cite: 32]</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="container">
+        <h2 class="section-title">Google Technologies Used</h2>
+        <div class="tech-stack text-center">
+            <ul>
+                <li>Google ML Kit (Barcode Scanning)</li>
+                <li>Firebase Realtime Database</li>
+                <li>Firebase Authentication</li>
+                <li>TensorFlow Lite</li>
+                <li>Google Cloud Platform (GCP)</li>
+                <li>Google Analytics</li>
+            </ul>
+        </div>
+        <p style="text-align: center; margin-top: 20px;">
+            These technologies enable real-time detection, secure login, and scalable data processing[cite: 30].
+        </p>
+    </section>
+
+    <section id="future" style="background-color: #333; color: white;">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--secondary-color);">Future Development</h2>
+            <div class="grid-2">
+                <div>
+                    <h4>📱 Mobile App Integration</h4>
+                    <ul class="roadmap-list">
+                        <li>View bills directly on mobile app.</li>
+                        <li>Easy payment via UPI, cards, or digital wallets[cite: 36, 38].</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>🤖 Advanced AI & Security</h4>
+                    <ul class="roadmap-list">
+                        <li>Improved AI-Based Product Recognition.</li>
+                        <li>Face Recognition for personalized offers.</li>
+                        <li>Anti-Theft system to detect unscanned items[cite: 39, 42, 45].</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Team Mindstack</h3>
+        <p>DKTE Society’s Yashwantrao Chavan Polytechnic, Ichalkaranji [cite: 4]</p>
+        <p>Developed for India Tech Summit / Innovate 2026 </p>
+    </footer>
+
+</body>
+</html>
