@@ -11,15 +11,15 @@
             --dark-bg: #343a40;
             --light-bg: #f8f9fa;
         }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); }
         .container { max-width: 1100px; margin: auto; padding: 20px; }
-        header { background: #fff; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        header { background: #fff; padding: 15px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .hero { background: var(--dark-bg); color: white; padding: 60px 20px; text-align: center; }
-        .section-title { color: var(--primary-color); border-bottom: 3px solid var(--secondary-color); display: inline-block; }
+        .section-title { color: var(--primary-color); border-bottom: 3px solid var(--secondary-color); display: inline-block; margin-bottom: 20px; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
-        .diagram-card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
-        .diagram-card img { max-width: 100%; border-radius: 8px; }
-        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .diagram-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        .diagram-card img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 10px; }
+        footer { background: #222; color: white; text-align: center; padding: 30px; margin-top: 40px; }
         @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -37,32 +37,47 @@
 
     <div class="container">
         <section style="text-align: center; margin-bottom: 50px;">
-            <h2 class="section-title">Our Project MVP</h2>
-            <div class="diagram-card" style="margin-top: 20px;">
+            <h2 class="section-title">Project MVP</h2>
+            <div class="diagram-card">
                 <img src="MVP.png" alt="Smart Shopping Cart MVP">
+                <p>हमारा वर्किंग मॉडल जो ऑटोमैटिक बिलिंग की सुविधा देता है।</p>
             </div>
         </section>
 
-        <section id="architecture">
-            <h2 class="section-title">Architecture & Workflow</h2>
+        <section id="diagrams">
+            <h2 class="section-title">Technical Workflow</h2>
             <div class="grid-2">
                 <div class="diagram-card">
-                    <h3>Block Diagram / Process Flow</h3>
+                    <h3>Process Flow Diagram</h3>
                     <img src="block di..png" alt="Process Flow Diagram">
-                    <p><em>यह चार्ट दिखाता है कि डेटा कैसे फ्लो होता है।</em></p>
+                    <p>सामान को स्कैन करने से लेकर बिलिंग तक की प्रक्रिया।</p>
                 </div>
                 <div class="diagram-card">
                     <h3>System Architecture</h3>
-                    <img src="architecture.png" alt="System Architecture Diagram">
-                    <p><em>हार्डवेयर और सॉफ्टवेयर का कनेक्शन।</em></p>
+                    <img src="architecture.png" alt="System Architecture">
+                    <p>हार्डवेयर (RFID/Arduino) और सॉफ्टवेयर का तकनीकी ढांचा।</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 50px;">
+            <h2 class="section-title">Future Scope</h2>
+            <div class="grid-2">
+                <div class="diagram-card">
+                    <h4>📱 App Integration</h4>
+                    <p>UPI पेमेंट और रीयल-टाइम बिल मोबाइल ऐप पर।</p>
+                </div>
+                <div class="diagram-card">
+                    <h4>🤖 AI Security</h4>
+                    <p>चोरी रोकने के लिए एंटी-थेफ्ट और फेस रिकग्निशन सिस्टम।</p>
                 </div>
             </div>
         </section>
     </div>
 
     <footer>
-        <h3>Developed for India Tech Summit 2026</h3>
-        <p>&copy; Team Mindstack - All Rights Reserved</p>
+        <h3>Developed for Innovate 2026 / India Tech Summit</h3>
+        <p>&copy; 2026 Team Mindstack | All Rights Reserved</p>
     </footer>
 
 </body>
